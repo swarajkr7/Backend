@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/news.css">
+</head>
+
+<body>
+
+    <!-- parentDiv -->
+
+    <div id="parentDiv">
+
+        <!-- Left Container -->
+
+        <div id="leftContainer">
+            <div id="leftUpperDiv">
+                <img src="https://www.freeiconspng.com/thumbs/news-icon/news-icon-24.png" />
+                <h2>News App</h2>
+            </div>
+            <div id="leftLowerDiv">
+                <ul id="List">
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- rightContainer -->
+
+        <div id="rightContainer">
+
+            <!-- rightUpper -->
+            <div id="rightUpperDiv">
+                <img src="https://news.wrteam.me/public/images/user.jpg" />
+                <h3 id="userName"></h3>
+
+            </div>
+
+            <!-- rightLower -->
+            <div id="rightLowerDiv">
+                <h1>Create and Manage News</h1>
+                <div id="addNews">
+                    <h3>Add News</h3>
+                </div>
+                <div id="Form">
+                    <form>
+                        <div id="formTop">
+                            <div id="formLeft">
+                                <div>
+                                    <label>Author</label>
+                                    <input type="text" id="author" placeholder="author" />
+                                </div>
+                                <div>
+                                    <label>Title</label>
+                                    <input type="text" id="title" placeholder="title" />
+                                </div>
+                            </div>
+                            <div id="formRight">
+                                <div id="rightTop">
+                                    <div>
+                                        <label>Date</label>
+                                        <input type="date" id="date" placeholder="date">
+                                    </div>
+                                    <div>
+                                        <label>Category</label>
+                                        <select name="category" id="category">
+                                            <option value="">Select Category</option>
+                                            <option value="International">International</option>
+                                            <option value="National">National</option>
+                                            <option value="Technology">Technology</option>
+                                            <option value="Sports">Sports</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div id="rightBottom">
+                                    <label>Image Link</label>
+                                    <input type="text" id="image" placeholder="image link" />
+                                </div>
+                            </div>
+                        </div>
+                        <div id="formBottom">
+                            <lable id="label">Content</lable>
+                            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                        </div>
+                        <input id="button" type="submit" value="Submit">
+                    </form>
+                </div>
+                <div id="newsView">
+                    <h3>Manage News</h3>
+                </div>
+                <div id="filter">
+                    <select name="filter1" id="filterCategory">
+                        <option value="Filter Category">Filter Category</option>
+                        <option value="international">International</option>
+                        <option value="national">National</option>
+                        <option value="technology">Technology</option>
+                        <option value="sports">Sports</option>
+                        <option value="all">All</option>
+                    </select>
+
+                    <select name="filter2" id="filterDate">
+                        <option value="Filter Date">Filter Date</option>
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="all">All</option>
+                    </select>
+
+                    <div id="Authors"></div>
+
+                </div>
+                <div id="outputDiv">
+                    <div id="Index">
+                        <h4>Index</h4>
+                    </div>
+                    <div id="Id">
+                        <h4>Last updated date</h4>
+                    </div>
+                    <div id="Title">
+                        <h4>Title</h4>
+                    </div>
+                    <div id="Author">
+                        <h4>Author</h4>
+                    </div>
+                    <div id="Category">
+                        <h4>Category</h4>
+                    </div>
+                    <div id="Actions">
+                        <h4>Actions</h4>
+                    </div>
+                </div>
+                <div id="realTimeUpdate">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="popupContainer">
+        <h1>Edit News</h1>
+        <div id=""Close>
+            <button onclick="reload()">Close</button>
+        </div>
+        <div id="Form">
+            <form>
+                <div id="formTop">
+                    <div id="formLeft">
+                        <div>
+                            <label>Author</label>
+                            <input type="text" id="Uauthor" placeholder="author" />
+                        </div>
+                        <div>
+                            <label>Title</label>
+                            <input type="text" id="Utitle" placeholder="title" />
+                        </div>
+                    </div>
+                    <div id="formRight">
+                        <div id="rightTop">
+                            <div>
+                                <label>Date</label>
+                                <input type="date" id="Udate" placeholder="date">
+                            </div>
+                            <div>
+                                <label>Category</label>
+                                <select name="category" id="Ucategory">
+                                    <option value="">Select Category</option>
+                                    <option value="International">International</option>
+                                    <option value="National">National</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Sports">Sports</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="rightBottom">
+                            <label>Image Link</label>
+                            <input type="text" id="Uimage" placeholder="image link" />
+                        </div>
+                    </div>
+                </div>
+                <div id="formBottom">
+                    <lable id="label">Content</lable>
+                    <textarea name="content" id="Ucontent" cols="30" rows="10"></textarea>
+                </div>
+                <input id="button" type="submit" value="Submit">
+            </form>
+    </div>
+    </div>
+    <script src="./script/news.js"></script>
+</body>
+
+</html>

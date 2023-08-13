@@ -1,0 +1,278 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+
+
+@font-face {
+    font-family: 'Faustina';
+    src: url('../font/Faustina-Italic-VariableFont_wght.ttf') format('truetype');
+}
+/*          Navbar         */
+
+
+/* navTop */
+#navTop{
+    width:100%;
+    border:1px solid black;
+    background-color: #1A2E51;
+    height:40px;
+
+}
+
+#navTopContainer{
+    width:85%;
+    /* border:1px solid white; */
+    margin:auto;
+    height:40px;
+    display:flex;
+    justify-content: space-between;
+}
+
+#navTopLeft{
+    /* border:1px solid white; */
+    /* height:10px; */
+    margin:auto 0px;
+}
+
+#navTopLeft h3{
+    color:white;
+}
+
+#navTopRight{
+    /* border:1px solid white; */
+    /* height:10px; */
+    margin:auto 0px;
+    display: flex;
+}
+
+#navTopRight>div{
+    /* border:1px solid white; */
+    margin-right:0px;
+    width:120px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#language{
+   background-color: #1A2E51;
+   color: white;
+   font-size: 15px;
+   border:none;
+}
+
+
+#navTop img {
+    background-color: #1A2E51;
+    width:15%;
+}
+
+/* navMiddle */
+
+#navMiddle{
+    width:100%;
+    
+    
+}
+
+#navMiddleContainer{
+    width:85%;
+    /* border:1px solid black; */
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#navMiddleLeft{
+    display: flex;
+    /* border:1px solid red; */
+}
+
+#navMiddleLeft h1{
+    margin-top:30px;
+    font-size: 35px;
+    color:#1A2E51;
+}
+
+#navMiddleLeft>img{
+    width:15%;
+    padding:20px;
+    padding-left: 0px;
+}
+#navMiddleRight>div>ul{
+    display: flex;
+    list-style:none;
+    /* border:1px solid green; */
+    margin-top:30px;
+}
+
+#navMiddleRight{
+    display: flex;
+}
+
+#navMiddleRight>div>ul>li{
+    padding:10px;
+    color: #1A2E51;
+}
+
+#navMiddleRL>ul>li{
+    font-weight:400;
+}
+
+#navMiddleRight>div{
+    /* border:1px solid black; */
+}
+
+#navMiddleRight>div>img{
+    background-color: red;
+}
+
+#navMiddleRR img{
+    width:10%;
+}
+
+#navMiddleRR button{
+    margin-top:30px;
+    padding:10px 20px;
+    background-color: #FF0000;
+    color:white;
+    border:none;
+    border-radius: 5px;
+}
+
+#navMiddleRR>button>a{
+    text-decoration: none;
+    color:White;
+}
+
+/* Content */
+
+#content{
+    width:100%;
+    border:1px solid black;
+}
+
+#contentDiv{
+    width:85%;
+    border:1px solid red;
+    margin:auto;
+}
+
+#contentDiv>div{
+    width: 75%;
+    border:1px solid black;
+    border-radius: 5px;
+}
+
+#contentDiv>div>h2{
+    font: 900;
+}
+
+#contentDiv>div>div{
+    width: 70%;
+    padding-left: 280px;
+
+}
+#contentDiv>div>div>p{
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-size: 19px;
+
+}
+#contentDiv>div img{
+    width:100%;
+}
+
+/* Footer */
+
+footer{
+    width:100%;
+    border:1px solid black;
+    margin-top: 270px;
+    background-color: #052c65;
+}
+
+#footerContent{
+    width:85%;
+    /* border:1px solid red; */
+    margin:auto;
+    display: flex;
+}
+
+/* left footer */
+
+#leftFooter{
+    width:18%;
+    padding:20px;
+    /* border:1px solid white; */
+}
+
+#leftFooter p{
+    color:white;
+}
+
+
+#leftFooter img{
+    width:30%;
+    margin-bottom: 50px;
+
+}
+
+/* middle Footer */
+
+#middleFooter{
+    width:56%;
+    /* border:1px solid white; */
+    display: flex;
+    color:white;
+}
+#middleFooter>div{
+    /* border:1px solid white; */
+    width:50%;
+    padding:20px;
+}
+#middleFooterLink{
+    display: flex;
+    color:white;
+}
+#middleFooterLink>div{
+    width:50%;
+    padding:20px;
+}
+#middleFooterLink>div>ul>li{
+    margin:20px 0px;
+}
+#middleFooterS>div>ul{
+    padding:20px
+}
+#middleFooterS>div>ul>li{
+    margin:20px 0px;
+}
+/* Right Footer */
+
+#rightFooter{
+    width:18%;
+    /* border:1px solid white; */
+    padding:20px;
+}
+
+#rightFooter img{
+    width:10%;
+}
+
+#rightFooter h2{
+    color: white;
+    margin-bottom: 30px;
+}
+
+#rightFooter>ul>li{
+
+ /* border:1px solid white; */
+}
+
+#rightFooter>ul>li>a{
+    color:white;
+    font-size: 20px;
+    padding-bottom: 50px;
+}

@@ -1,0 +1,294 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* parentDiv */
+
+#parentDiv{
+    width:100%;
+    display:flex;
+    /* border:1px solid black; */
+}
+
+/* leftDiv */
+
+#leftContainer{
+     width:18%;
+     /* border:1px solid red; */
+     background-color: #343a40;
+     position:fixed;
+
+}
+
+#rightContainer{
+    width:82%;
+    /* border:1px solid green; */
+    margin-left: 18%;
+}
+
+#leftUpperDiv{
+    border:1px solid grey;
+    border-left: none;
+    display: flex;
+    height:55px;
+}
+
+#leftUpperDiv img{
+    width:15%;
+    margin:5px 15px;
+
+}
+#leftUpperDiv h2{
+    margin:auto -5px;
+    font-size: 20px;
+    font-weight: 300;
+    color:#FFFFFFCC;
+}
+
+#leftLowerDiv{
+    height:650px;
+}
+
+#rightUpperDiv{
+    /* border:1px solid orange; */
+    display: flex;
+    justify-content: end;
+    height:55px;   
+    background-color: #FFFFFF;
+}
+
+#rightUpperDiv img{
+    width:3%;
+    height: 40px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin:auto 5px;
+}
+
+#rightUpperDiv h3{
+    margin:auto 5px;
+    font-weight: 300;
+}
+#rightLowerDiv{
+    background-color: #F4F6F9;
+ }
+#leftLowerDiv>ul>li{
+    list-style: none;
+    margin:20px 0px;
+    
+}
+
+#leftLowerDiv>ul>li>a{
+    color:#FFFFFF;
+    text-decoration: none;
+}
+
+#leftLowerDiv {
+    /* border:1px solid white; */
+    padding-left: 50px;
+    margin-top:50px;
+}
+
+
+#rightLowerDiv h1{
+    font-weight: 400;
+    font-size: 28.8px;
+    padding:15px 10px;
+}
+
+
+#Form{
+    width:100%;
+    margin:auto;
+    /* border: 1px solid black; */
+    margin-bottom: 50px;
+}
+
+#formTop{
+    width:95%;
+    margin:auto;
+    display: flex;
+    /* border:1px solid black; */
+    justify-content: space-between;
+}
+
+#formLeft{
+    width:48.5%;
+    /* border:1px solid green; */
+}
+
+#formRight{
+    width:48.5%;
+    /* border:1px solid red; */
+}
+
+#formLeft>div{
+    /* border:1px solid red; */
+}
+
+#formLeft input{
+    width:570px;
+    height:35px;
+    border-radius: 5px;
+    border:1px solid grey;
+    padding-left: 5px;
+}
+
+#rightTop {
+    display: flex;
+    justify-content: space-between;
+}
+#rightTop>div{
+    /* border:1px solid red; */
+    width:48%;
+}
+
+#rightTop>div>label{
+    margin-bottom:0px;
+}
+
+#formRight input {
+    width:275px;
+    height:35px;
+    border-radius: 5px;
+    border:1px solid grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    
+}
+#formRight select {
+    width:275px;
+    height:35px;
+    border-radius: 5px;
+    border:1px solid grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#formLeft input{
+    margin-bottom: 10px;
+    margin-top:10px;
+    padding-left: 5px;
+}
+
+#formRight label{
+    margin-bottom: 100px;
+}
+
+#rightBottom input{
+    width:570px;
+    padding-left: 5px;
+}
+
+#rightBottom>label{
+    margin-bottom: 0px;
+}
+
+#label{
+    margin-left:30px;
+    margin-bottom: 0px;
+}
+
+#formBottom textarea{
+    margin-top:10px;
+    width:1175px;
+    margin-left: 35px;
+    border:1px solid grey;
+}
+
+#button{
+    margin-left:35px;
+    margin-top:20px;
+}
+
+#addNews{
+    background-color: #6C757D;
+    color:white;
+}
+
+#addNews h3{
+    margin-left:20px;
+    padding:10px;
+}
+
+#newsView{
+    background-color: #6C757D;
+    color:white;
+    margin-bottom: 50px;
+}
+
+#newsView h3{
+    margin-left:20px;
+    padding:10px;
+}
+/* filter */
+
+#filter{
+    width:94%;
+    /* border:1px solid black; */
+    margin:auto;
+    margin-bottom: 50px;
+}
+
+#filter select{
+    padding:10px;
+    border-radius: 5px;
+    margin-left:20px;
+}
+
+#outputDiv{
+    width:94%;
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    /* border:1px solid black; */
+    margin:auto;
+    
+}
+
+
+#outputDiv>div{
+    /* border:1px solid red; */
+    text-align: center;
+}
+
+#button{
+    padding:5px;
+    background-color: #1A2E50 ;
+    color:white;
+    font-size: 20px;
+    border-radius: 5px;
+    border:none;
+}
+
+/* outputDiv */
+
+#realTimeUpdate{
+   width:94%;
+   display:grid;
+   grid-template-columns: repeat(6,1fr);
+   margin: auto;
+}
+
+#realTimeUpdate>div{
+    border:2px solid white;
+    text-align: center;
+    padding:20px 0px;
+}
+
+
+.popupContainer{
+    height: 700px;
+    width: 1300px;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+}
