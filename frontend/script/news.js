@@ -106,13 +106,16 @@ function call() {
             btn1.style.border = "0px";
             btn1.style.borderRadius = "5px";
             btn1.addEventListener("click", () => {
-                document.querySelector("#Uauthor").innerText=elem.author
-                document.querySelector("#Utitle").innerText=elem.title
-                document.querySelector("#Udate").innerText=elem.date
-                document.querySelector("#Ucategory").innerText=elem.category
-                document.querySelector("#Uimage").innerText=elem.img_link
-                document.querySelector("#Ucontent").innerText=elem.content
+                document.querySelector("#Uauthor").value=elem.author
+                document.querySelector("#Utitle").value=elem.title
+                document.querySelector("#Udate").value=elem.date
+                document.querySelector("#Ucategory").value=elem.category
+                document.querySelector("#Uimage").value=elem.img_link
+                document.querySelector("#Ucontent").value=elem.content
                 loginPopup()
+                document.querySelector("#Ubutton").addEventListener("click", ()=>{
+                    UpdateNews(elem._id);
+                })
                 localStorage.setItem("toUpdate", JSON.stringify(elem.id))
             })
             let Update = document.createElement('a');
@@ -125,6 +128,7 @@ function call() {
                 btn2.style.borderRadius = "5px";
                 btn2.addEventListener("click", () => {
                     deleteNews(elem._id);
+                    getUData();
                 })
                 remove.innerText = "Delete";
                 remove.style.textDecoration = "none";
@@ -155,6 +159,36 @@ function call() {
     })
     
     
+}
+
+
+function getUData(event) {
+    event.preventDefault();
+    let payload = {
+        author: document.getElementById("Uauthor").value,
+        title: document.getElementById("Utitle").value,
+        date: document.getElementById("Udate").value,
+        category: document.getElementById("Ucategory").value,
+        img_link: document.getElementById("Uimage").value,
+        content: document.getElementById("Ucontent").value
+    }
+    // 
+    
+    UpdateNews(payload)
+}
+
+const UpdateNews=(newsId,payload)=>{
+
+
+    
+    fetch(`http://localhost:9999/news/update/${newsId}`,{
+        method:"PATCH",
+        body: JSON.stringify(payload),
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem("token")
+        },
+    })
 }
 
     }).catch(err => console.log(err));

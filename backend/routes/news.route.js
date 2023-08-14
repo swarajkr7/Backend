@@ -33,6 +33,7 @@ newsRouter.post("/create",async(req,res)=>{
 })
 
 newsRouter.patch("/update/:id",async(req,res)=>{
+    console.log("Update wala section call to ho raha hai")
     const payload=req.body
     const id=req.params.id
     const news=await NewsModel.findOne({"_id":id})
