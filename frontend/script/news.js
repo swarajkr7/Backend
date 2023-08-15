@@ -6,12 +6,13 @@ const loginPopup=()=>{
 
     let main=document.querySelector("#parentDiv")
     main.style.filter="blur(100px)"
+
     
 }
 
-function reload(){
-    window.open("news.html")
-}
+// function reload(){
+//     window.open("news.html")
+// }
 
 
 var Role=localStorage.getItem("Role")
@@ -113,11 +114,8 @@ function call() {
                 document.querySelector("#Uimage").value=elem.img_link
                 document.querySelector("#Ucontent").value=elem.content
                 loginPopup()
-                document.querySelector("#Ubutton").addEventListener("click", ()=>{
-                    UpdateNews(elem._id);
-                })
-                localStorage.setItem("toUpdate", JSON.stringify(elem.id))
             })
+            // document.querySelector("#Ubutton").
             let Update = document.createElement('a');
             if(Role=="Admin"){
                 let btn2 = document.createElement('button');
@@ -128,7 +126,6 @@ function call() {
                 btn2.style.borderRadius = "5px";
                 btn2.addEventListener("click", () => {
                     deleteNews(elem._id);
-                    getUData();
                 })
                 remove.innerText = "Delete";
                 remove.style.textDecoration = "none";
@@ -162,34 +159,35 @@ function call() {
 }
 
 
-function getUData(event) {
-    event.preventDefault();
-    let payload = {
+function UpdateNews(newsId) {
+    let updatedPayload = {
         author: document.getElementById("Uauthor").value,
         title: document.getElementById("Utitle").value,
         date: document.getElementById("Udate").value,
         category: document.getElementById("Ucategory").value,
         img_link: document.getElementById("Uimage").value,
         content: document.getElementById("Ucontent").value
-    }
-    // 
-    
-    UpdateNews(payload)
-}
+    };
 
-const UpdateNews=(newsId,payload)=>{
-
-
-    
-    fetch(`http://localhost:9999/news/update/${newsId}`,{
-        method:"PATCH",
-        body: JSON.stringify(payload),
+    fetch(`http://localhost:9999/news/update/${newsId}`, {
+        method: "PATCH",
+        body: JSON.stringify(updatedPayload),
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': localStorage.getItem("token")
+            'Authorization': localStorage.getItem("Token")
         },
     })
+    // .then(response => response.json())
+    // .then(data => {
+    //     console.log("News updated successfully:", data);
+    //     // Optionally, you can refresh the displayed data after update
+    //     call();
+    // })
+    // .catch(error => {
+    //     console.error("Error updating news:", error);
+    // });
 }
+
 
     }).catch(err => console.log(err));
 }
