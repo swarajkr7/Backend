@@ -115,7 +115,9 @@ function call() {
                 document.querySelector("#Ucontent").value=elem.content
                 loginPopup()
             })
-            // document.querySelector("#Ubutton").
+            document.querySelector("#Ubutton").addEventListener("click",()=>{
+                UpdateNews(elem._id)
+            })
             let Update = document.createElement('a');
             if(Role=="Admin"){
                 let btn2 = document.createElement('button');
