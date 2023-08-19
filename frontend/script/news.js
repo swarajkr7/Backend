@@ -10,9 +10,9 @@ const loginPopup=()=>{
     
 }
 
-// function reload(){
-//     window.open("news.html")
-// }
+function reload(){
+    window.open("news.html")
+}
 
 
 var Role=localStorage.getItem("Role")
@@ -103,6 +103,7 @@ function call() {
             let btn1 = document.createElement('button');
             btn1.style.backgroundColor = "blue";
             btn1.innerText="Update"
+            btn1.style.webkitTextFillColor="White"
             btn1.style.padding = "10px 10px";
             btn1.style.border = "0px";
             btn1.style.borderRadius = "5px";
@@ -122,7 +123,7 @@ function call() {
             if(Role=="Admin"){
                 let btn2 = document.createElement('button');
                 let remove = document.createElement('a');
-                btn2.style.backgroundColor = "red";
+                btn2.style.backgroundColor = "blue";
                 btn2.style.padding = "10px 10px";
                 btn2.style.border = "0px";
                 btn2.style.borderRadius = "5px";
