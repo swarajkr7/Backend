@@ -106,7 +106,7 @@ function call() {
             btn1.style.webkitTextFillColor="White"
             btn1.style.padding = "10px 10px";
             btn1.style.border = "0px";
-            btn1.style.borderRadius = "5px";
+            btn1.style.borderRadius = "6px";
             btn1.addEventListener("click", () => {
                 document.querySelector("#Uauthor").value=elem.author
                 document.querySelector("#Utitle").value=elem.title
