@@ -1,6 +1,8 @@
 *{
     padding:0px;
     margin:0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 
@@ -27,16 +29,14 @@
     height:40px;
     display:flex;
     justify-content: space-between;
+    font-size: 12px;
 }
 
 #navTopLeft{
     /* border:1px solid white; */
     /* height:10px; */
     margin:auto 0px;
-}
-
-#navTopLeft h3{
-    color:white;
+    color: white;
 }
 
 #navTopRight{
@@ -72,8 +72,10 @@
 #navMiddle{
     width:100%;
     background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
-    
-    
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #navMiddleContainer{
@@ -87,13 +89,12 @@
 
 #navMiddleLeft{
     display: flex;
-    /* border:1px solid red; */
+    /* border:1px solid black; */
 }
 
-#navMiddleLeft h1{
-    margin-top:30px;
-    font-size: 35px;
-    color:#1A2E51;
+#navMiddleLeft h2{
+    margin:auto;
+    color:white;
 }
 
 #navMiddleLeft>img{
@@ -105,7 +106,6 @@
     display: flex;
     list-style:none;
     /* border:1px solid green; */
-    margin-top:30px;
     text-decoration: none;
 }
 
@@ -117,8 +117,15 @@
     padding:10px;
     color: white;
     list-style: none;
+    padding: 10px 20px;
     
 }
+#navMiddleRL{
+    margin: auto;
+  }
+  #navMiddleRR{
+    margin: auto;
+  }
 #navMiddleRight>div>ul>li>a{
     text-decoration: none;
     color:white;
@@ -137,11 +144,10 @@
 }
 
 #navMiddleRR img{
-    width:10%;
+    width:7%;
 }
 
 #navMiddleRR button{
-    margin-top:30px;
     padding:10px 20px;
     background-color: #FF0000;
     color:white;
@@ -158,7 +164,7 @@
 
 #content{
     width:100%;
-    border:1px solid black;
+    /* border:1px solid black; */
 }
 
 #contentDiv{
