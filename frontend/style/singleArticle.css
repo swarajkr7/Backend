@@ -71,6 +71,7 @@
 
 #navMiddle{
     width:100%;
+    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
     
     
 }
@@ -105,6 +106,7 @@
     list-style:none;
     /* border:1px solid green; */
     margin-top:30px;
+    text-decoration: none;
 }
 
 #navMiddleRight{
@@ -113,9 +115,15 @@
 
 #navMiddleRight>div>ul>li{
     padding:10px;
-    color: #1A2E51;
+    color: white;
+    list-style: none;
+    
 }
-
+#navMiddleRight>div>ul>li>a{
+    text-decoration: none;
+    color:white;
+    
+}
 #navMiddleRL>ul>li{
     font-weight:400;
 }
@@ -155,18 +163,18 @@
 
 #contentDiv{
     width:85%;
-    border:1px solid red;
+    /* border:1px solid red; */
     margin:auto;
 }
 
 #contentDiv>div{
     width: 75%;
-    border:1px solid black;
+    /* border:1px solid black; */
     border-radius: 5px;
 }
 
 #contentDiv>div>h2{
-    font: 900;
+    font-size: 40px;
 }
 
 #contentDiv>div>div{
@@ -176,12 +184,14 @@
 }
 #contentDiv>div>div>p{
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 19px;
-
 }
+
 #contentDiv>div img{
     width:100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 /* Footer */
