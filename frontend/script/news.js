@@ -154,8 +154,9 @@ function call() {
     fetch(`http://localhost:9999/news/delete/${newsId}`,{
         method:"DELETE",
         headers:{
+            'Content-Type': 'application/json',
             "Authorization":localStorage.getItem("Token")
-        }
+        },
     })
     
     
@@ -180,15 +181,16 @@ function UpdateNews(newsId) {
             'Authorization': localStorage.getItem("Token")
         },
     })
-    // .then(response => response.json())
-    // .then(data => {
-    //     console.log("News updated successfully:", data);
-    //     // Optionally, you can refresh the displayed data after update
-    //     call();
-    // })
-    // .catch(error => {
-    //     console.error("Error updating news:", error);
-    // });
+   
+    .then(response => response.json())
+    .then(data => {
+        console.log("News updated successfully:", data);
+        // Optionally, you can refresh the displayed data after update
+        call();
+    })
+    .catch(error => {
+        console.error("Error updating news:", error);
+    });
 }
 
 
