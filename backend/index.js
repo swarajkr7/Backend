@@ -2,7 +2,8 @@ const express = require("express");
 const { connection } = require("./configs/db");
 const { authorRouter } = require("./routes/author.routes");
 const { newsRouter } = require("./routes/news.route");
-const { authenticate }= require("./middlewares/authenticate.middleware");
+const { authenticate } = require("./middlewares/authenticate.middleware");
+require("dotenv").config()
 
 var cors = require('cors');
 
@@ -19,7 +20,7 @@ app.use(authenticate);
 app.use("/news",newsRouter)
 
 
-app.listen(9999, async()=>{
+app.listen(process.env.port, async()=>{
     try{
         await connection;
         console.log("Connected to the DB");
