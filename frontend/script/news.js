@@ -46,7 +46,7 @@ function getData(event) {
 }
 
 async function postData(payload) {
-        let data = await fetch("http://localhost:9999/news/create", {
+        let data = await fetch("https://friendly-kit-bull.cyclic.app/news/create", {
             method: 'POST',
             body: JSON.stringify(payload),
             headers: {
@@ -78,7 +78,7 @@ call();
 
 // Display data on the dashboard
 function call() {
-    fetch(`http://localhost:9999/news/${Id}`, {
+    fetch(`https://friendly-kit-bull.cyclic.app/news/${Id}`, {
         headers: {
             "Authorization": localStorage.getItem("Token")
         }
@@ -151,7 +151,7 @@ function call() {
 
 
    const deleteNews=(newsId)=>{
-    fetch(`http://localhost:9999/news/delete/${newsId}`,{
+    fetch(`https://friendly-kit-bull.cyclic.app/news/delete/${newsId}`,{
         method:"DELETE",
         headers:{
             'Content-Type': 'application/json',
@@ -173,7 +173,7 @@ function UpdateNews(newsId) {
         content: document.getElementById("Ucontent").value
     };
 
-    fetch(`http://localhost:9999/news/update/${newsId}`, {
+    fetch(`https://friendly-kit-bull.cyclic.app/news/update/${newsId}`, {
         method: "PATCH",
         body: JSON.stringify(updatedPayload),
         headers: {

@@ -13,7 +13,7 @@ function getData(event) {
 }
 
 async function login(payload) {
-        let data = await fetch("http://localhost:9999/authors/login", {
+        let data = await fetch("https://friendly-kit-bull.cyclic.app/authors/login", {
             method: 'POST',
             body: JSON.stringify(payload),
             headers: {

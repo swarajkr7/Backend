@@ -15,13 +15,15 @@ let authorArr=[];
 authorCall();
 
 function authorCall(){
-    fetch(`http://localhost:9999/authors`,).then(res => res.json()).then(res => {
+    fetch(`https://friendly-kit-bull.cyclic.app/authors`,).then(res => res.json()).then(res => {
         console.log(res);
         authorArr = res;
 
         authorDisplay(authorArr);
-
+        
         function authorDisplay(authorArr){
+            const container=document.querySelector("#dataDiv")
+            container.innerHTML="";
             authorArr?.map((elem,index)=>{
                 let p=document.createElement("p");
                 p.innerHTML=elem.name;
@@ -33,25 +35,31 @@ function authorCall(){
             
                 })
 
-                document.querySelector("#dataDiv").append(p,button)
+                container.append(p,button)
             })
 
         }
         
-        const deleteAuthor=(ID)=>{
-            fetch(`http://localhost:9999/authors/delete/${ID}`,{
-                method:"DELETE",
-                headers:{
-                    "Authorization":localStorage.getItem("Token")
-                }
-            }) 
+        const deleteAuthor=async(ID)=>{
+            try{
+                fetch(`https://friendly-kit-bull.cyclic.app/authors/delete/${ID}`,{
+                    method:"DELETE",
+                    headers:{
+                        "Authorization":localStorage.getItem("Token")
+                    }
+                }) 
+                authorCall();
+            }
+            catch(error){
+                console.log(error)
+            }
             
             
         }
 
         const deleteAllNews=(ID)=>{
             console.log("Yaha tak to pahuch ja raha hai")
-            fetch(`http://localhost:9999/news/Adelete/${ID}`,{
+            fetch(`https://friendly-kit-bull.cyclic.app/news/Adelete/${ID}`,{
                 method:"DELETE",
                 headers:{
                     "Authorization":localStorage.getItem("Token")

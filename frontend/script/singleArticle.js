@@ -4,7 +4,7 @@ let array = [];
 
 
 function singleArticle() {
-    fetch(`http://localhost:9999/news/singleArticle/${SA}`, {
+    fetch(`https://friendly-kit-bull.cyclic.app/news/singleArticle/${SA}`, {
         headers: {
             "Authorization": localStorage.getItem("Token")
         }

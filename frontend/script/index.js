@@ -2,7 +2,7 @@ let array = [];
 call();
 
 function call() {
-  fetch("http://localhost:9999/news", {
+  fetch("https://friendly-kit-bull.cyclic.app/news", {
     headers: {
       Authorization: localStorage.getItem("Token"),
     },
